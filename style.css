@@ -1,0 +1,186 @@
+/* Nikunj Bhil — minimal personal site
+   Design: off-white paper, near-black serif text, single restrained blue link.
+   No cards, no icons, no shadows. Whitespace and type do the work. */
+
+:root {
+  --bg: #FBFBF9;
+  --text: #1A1A1A;
+  --muted: #8A8A8A;
+  --link: #2B5CE6;
+  --rule: #E7E5DF;
+  --max-width: 620px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+
+/* Top identity row */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 56px;
+}
+
+.name {
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--link);
+}
+
+nav a.active {
+  color: var(--text);
+}
+
+/* Headings */
+h1 {
+  font-size: 28px;
+  line-height: 1.35;
+  margin: 0 0 28px;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 40px 0 12px;
+}
+
+p {
+  margin: 0 0 22px;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: none;
+}
+
+/* Interests / plain lists */
+ul.plain {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+ul.plain li {
+  margin-bottom: 10px;
+}
+
+/* Blog list */
+.post-list {
+  margin-top: 8px;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-item:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.post-item a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-item a:hover,
+.post-item a:focus-visible {
+  color: var(--link);
+}
+
+.post-date {
+  color: var(--muted);
+  font-size: 16px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.empty-note {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  margin-top: 64px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: var(--link);
+}
+
+/* Keyboard focus visibility */
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* Reduced motion respected by default: no animation used on this site */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+  .wrap {
+    padding: 48px 20px 72px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
